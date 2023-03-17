@@ -34,6 +34,12 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+.section-title {
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
 
 .header {
   background-color: #151515;
@@ -157,4 +163,24 @@ body {
 }
 .swiper-pagination-bullets.swiper-pagination-horizontal{
   bottom: 50px;
+}
+.why-lease {
+  padding: 150px 0;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+  &__item-img {
+    margin-bottom: 30px;
+  }
+  &__item-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__item-text {
+    text-align: left;
+  }
 }
