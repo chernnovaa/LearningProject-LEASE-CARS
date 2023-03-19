@@ -229,3 +229,37 @@ body {
     }
   }
 }
+.video {
+  padding-bottom: 150px;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  &__content {
+    margin: 0 auto;
+    display: block;
+  }
+}
+.important {
+  padding-bottom: 150px;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__text {
+    max-width: 580px;
+    margin: 0 auto 50px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  &__item-img {
+    margin-bottom: 20px;
+  }
+}
