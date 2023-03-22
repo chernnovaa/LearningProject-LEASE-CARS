@@ -270,10 +270,11 @@ body {
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 30px 20px;
   }
   &__item-img {
     margin-bottom: 20px;
+    width: 100%;
   }
 }
 .contacts {
@@ -439,5 +440,149 @@ body {
     color: #0066ff;
     border: 1px solid #0066ff;
     border-top: 0;
+  }
+}
+.menu__btn {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+  & span {
+    height: 2px;
+    background-color: #fff;
+    width: 100%;
+  }
+}
+@media (max-width: 1040px) {
+  .video__content {
+    width: 100%;
+  }
+}
+@media (max-width: 860px) {
+  .menu__btn {
+    display: flex;
+  }
+  .menu__btn,
+  .logo {
+    position: relative;
+    z-index: 10;
+  }
+  .menu__list {
+    position: absolute;
+    z-index: 5;
+    background-color: #151515;
+    flex-direction: column;
+    padding-top: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform .3s ease;
+  }
+  .menu__list.menu__list--active {
+    transform: translateY(0);
+  }
+  .why-lease__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .important__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .top__title {
+    font-size: 70px;
+  }
+  .top__link {
+    max-width: 360px;
+    padding: 16px;
+    font-size: 28px;
+  }
+  .swiper-pagination-bullet {
+    width: 60px;
+    &-active {
+      height: 4px;
+    }
+  }
+  .footer__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .video__content {
+    height: 400px;
+  }
+}
+@media (max-width: 540px) {
+  .top__title {
+    font-size: 60px;
+  }
+  .top__link {
+    max-width: 310px;
+    font-size: 24px;
+  }
+  .swiper-pagination-bullet {
+    width: 35px;
+  }
+  .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullet {
+    margin: 0 10px;
+  }
+  .why-lease {
+    padding: 50px 0;
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item-text {
+      text-align: center;
+    }
+  }
+  .section-title {
+    font-size: 34px;
+  }
+  .how-does {
+    padding-bottom: 50px;
+    &__list {
+      padding: 30px 0 40px;
+    }
+    &__item {
+      padding: 65px 0 10px 0;
+      margin-right: auto;
+      &::before{
+        right: 0;
+        margin: 0 auto;
+        font-size: 32px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .video {
+    padding-bottom: 50px;
+    &__content {
+      height: 200px;
+    }
+  }
+  .important {
+    padding-bottom: 50px;
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .app,
+  .copy__nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .copy__nav-list {
+    gap: 20px;
   }
 }
